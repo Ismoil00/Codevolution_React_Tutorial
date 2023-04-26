@@ -1,0 +1,14 @@
+.primary {
+    background-color: rgb(0, 90, 143);
+    color: white;
+}
+
+.error {
+    background-color: red;
+    color: white;
+}
+
+.success {
+    background-color: green;
+    color: white;
+}

@@ -5,11 +5,9 @@ class ClassComponent extends Component {
     super();
     this.state = {
       message: "Welcome Umed",
-    };
-    this.clicked = false;
-    this.state = {
       count: 0,
     };
+    this.clicked = false;
   }
 
   changeMessage() {
