@@ -7,20 +7,20 @@ class ClassLifecycle extends Component {
       class: "Constructor",
     };
 
-    console.log("LifeCycle > Constructor Method");
+    // console.log("LifeCycle > Constructor Method");
   }
 
   static getDerivedStateFromProps(props, state) {
-    console.log("LifeCycle > getDerivedStateFromProps Method");
+    // console.log("LifeCycle > getDerivedStateFromProps Method");
     return null;
   }
 
   componentDidMount() {
-    console.log("LifeCycle > componentDidMount Method");
+    // console.log("LifeCycle > componentDidMount Method");
   }
 
   render() {
-    console.log("LifeCycle > Render Method");
+    // console.log("LifeCycle > Render Method");
 
     return <div>Class Lifecycle</div>;
   }
