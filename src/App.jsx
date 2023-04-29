@@ -1,9 +1,11 @@
 import "./App.css";
+import { useEffect, useState } from "react";
 import Func_Comp from "./components/FunctionalComp";
 import Class_Comp from "./components/ClassComp";
 import all from "./cssModules/button.module.css";
 import ClassLifecycle from "./components/ClassLifeCycle";
-import { useEffect, useState } from "react";
+import Stopwatch from "./components/Timer";
+import ParentContext from "./components/ContextParent";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -18,7 +20,7 @@ function App() {
   useEffect(() => {
     document.title = `You clicked ${count} times!`;
     window.addEventListener("mousemove", recordMouseMove);
-    console.log("useEffect Running!");
+    // console.log(`Coordinates: X-${x}, Y-${y}`);
   });
 
   return (
@@ -34,6 +36,8 @@ function App() {
           Click me
         </button>
       </Func_Comp>
+      <Stopwatch />
+      <ParentContext />
       <hr />
       <Class_Comp name="Comp">
         <p>Class Component Child Property</p>
