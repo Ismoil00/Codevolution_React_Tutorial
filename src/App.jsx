@@ -38,10 +38,10 @@ function App() {
           Click me
         </button>
       </Func_Comp>
-      <MultipleUseReducer />
-      <ObjectUseReducer />
       <Stopwatch />
       <ParentContext />
+      <MultipleUseReducer />
+      <ObjectUseReducer />
       <hr />
       <Class_Comp name="Comp">
         <p>Class Component Child Property</p>
