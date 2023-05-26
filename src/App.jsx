@@ -8,6 +8,7 @@ import MultipleUseReducer from "./components/multipleUseReducer";
 import ObjectUseReducer from "./components/objectUseReducer";
 import Stopwatch from "./components/Timer";
 import ParentContext from "./components/ContextParent";
+import { ExcelExport } from "./components/excelFile";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -42,6 +43,7 @@ function App() {
       <ParentContext />
       <MultipleUseReducer />
       <ObjectUseReducer />
+      <ExcelExport />
       <hr />
       <Class_Comp name="Comp">
         <p>Class Component Child Property</p>
