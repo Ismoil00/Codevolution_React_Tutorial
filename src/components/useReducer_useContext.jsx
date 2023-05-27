@@ -1,4 +1,3 @@
-import React from "react";
 import { useContext } from "react";
 import { UseReducerContext } from "../App";
 import all from "../cssModules/button.module.css";

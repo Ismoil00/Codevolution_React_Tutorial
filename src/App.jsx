@@ -9,6 +9,7 @@ import ObjectUseReducer from "./components/objectUseReducer";
 import Stopwatch from "./components/Timer";
 import ParentContext from "./components/ContextParent";
 import UseReducer_UseContext from "./components/useReducer_useContext";
+import UseReducer_FetchingData from "./components/FetchingDataWith_useReducer";
 
 export const UseReducerContext = createContext();
 
@@ -63,9 +64,12 @@ function App() {
       <ParentContext />
       <MultipleUseReducer />
       <ObjectUseReducer />
-      <UseReducerContext.Provider value={{ onClickDispatch: dispatch, text: useReducerMessage }}>
+      <UseReducerContext.Provider
+        value={{ onClickDispatch: dispatch, text: useReducerMessage }}
+      >
         <UseReducer_UseContext />
       </UseReducerContext.Provider>
+      <UseReducer_FetchingData />
       <hr />
       <Class_Comp name="Comp">
         <p>Class Component Child Property</p>
