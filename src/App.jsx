@@ -1,5 +1,5 @@
 import "./App.css";
-import { useEffect, useState } from "react";
+import { useEffect, useState, createContext, useReducer } from "react";
 import Func_Comp from "./components/FunctionalComp";
 import Class_Comp from "./components/ClassComp";
 import all from "./cssModules/button.module.css";
@@ -8,7 +8,9 @@ import MultipleUseReducer from "./components/multipleUseReducer";
 import ObjectUseReducer from "./components/objectUseReducer";
 import Stopwatch from "./components/Timer";
 import ParentContext from "./components/ContextParent";
-import { ExcelExport } from "./components/excelFile";
+import UseReducer_UseContext from "./components/useReducer_useContext";
+
+export const UseReducerContext = createContext();
 
 function App() {
   const [count, setCount] = useState(0);
@@ -25,6 +27,24 @@ function App() {
     window.addEventListener("mousemove", recordMouseMove);
     // console.log(`Coordinates: X-${x}, Y-${y}`);
   });
+
+  // useReducer + useContext;
+  const [useReducerMessage, dispatch] = useReducer(
+    displayMessage,
+    "useReducer + useContext"
+  );
+  function displayMessage(curVal, action) {
+    switch (action.click) {
+      case "console":
+        console.log(curVal);
+        return action.text;
+      case "alert":
+        alert(curVal);
+        return action.text;
+      default:
+        return curVal;
+    }
+  }
 
   return (
     <>
@@ -43,7 +63,9 @@ function App() {
       <ParentContext />
       <MultipleUseReducer />
       <ObjectUseReducer />
-      <ExcelExport />
+      <UseReducerContext.Provider value={{ onClickDispatch: dispatch, text: useReducerMessage }}>
+        <UseReducer_UseContext />
+      </UseReducerContext.Provider>
       <hr />
       <Class_Comp name="Comp">
         <p>Class Component Child Property</p>
