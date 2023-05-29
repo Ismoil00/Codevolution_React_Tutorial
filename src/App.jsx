@@ -10,7 +10,7 @@ import Stopwatch from "./components/Timer";
 import ParentContext from "./components/ContextParent";
 import UseReducer_UseContext from "./components/useReducer_useContext";
 import UseReducer_FetchingData from "./components/FetchingDataWith_useReducer";
-import UseCallback from "./components/useCallback";
+import UseCallback from "./components/useCallback/useCallback";
 
 export const UseReducerContext = createContext();
 
@@ -96,6 +96,20 @@ function App() {
         useCallback:
       </h2>
       <UseCallback />
+
+      <p>-----------------------------------------------------------</p>
+
+      <h2
+        style={{
+          fontWeight: "bold",
+          fontSize: "2.5rem",
+          textDecoration: "underline",
+        }}
+      >
+        useMemo:
+      </h2>
+      {/* <UseCallback /> */}
+
       <hr />
       <Class_Comp name="Comp">
         <p>Class Component Child Property</p>
