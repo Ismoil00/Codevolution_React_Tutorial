@@ -22,7 +22,6 @@ const MultipleUseReducer = () => {
 
   return (
     <div>
-      <p>-----------------------------------------------------------</p>
       <h3>useReducer Count 1 = {countOne}</h3>
       <h3>useReducer Count 2 = {countTwo}</h3>
       <div

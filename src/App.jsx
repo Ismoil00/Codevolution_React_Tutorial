@@ -10,24 +10,25 @@ import Stopwatch from "./components/Timer";
 import ParentContext from "./components/ContextParent";
 import UseReducer_UseContext from "./components/useReducer_useContext";
 import UseReducer_FetchingData from "./components/FetchingDataWith_useReducer";
+import UseCallback from "./components/useCallback";
 
 export const UseReducerContext = createContext();
 
 function App() {
-  const [count, setCount] = useState(0);
-  const [x, setX] = useState(0);
-  const [y, setY] = useState(0);
+  // const [count, setCount] = useState(0);
+  // const [x, setX] = useState(0);
+  // const [y, setY] = useState(0);
 
-  function recordMouseMove(e) {
-    setX(e.clientX);
-    setY(e.clientY);
-  }
+  // function recordMouseMove(e) {
+  //   setX(e.clientX);
+  //   setY(e.clientY);
+  // }
 
-  useEffect(() => {
-    document.title = `You clicked ${count} times!`;
-    window.addEventListener("mousemove", recordMouseMove);
-    // console.log(`Coordinates: X-${x}, Y-${y}`);
-  });
+  // useEffect(() => {
+  //   document.title = `You clicked ${count} times!`;
+  //   window.addEventListener("mousemove", recordMouseMove);
+  //   // console.log(`Coordinates: X-${x}, Y-${y}`);
+  // });
 
   // useReducer + useContext;
   const [useReducerMessage, dispatch] = useReducer(
@@ -49,7 +50,7 @@ function App() {
 
   return (
     <>
-      <Func_Comp name="Comp">
+      {/* <Func_Comp name="Comp">
         <p>
           X - {x}, Y - {y}
         </p>
@@ -59,9 +60,21 @@ function App() {
         >
           Click me
         </button>
-      </Func_Comp>
+      </Func_Comp> */}
       <Stopwatch />
       <ParentContext />
+
+      <p>-----------------------------------------------------------</p>
+
+      <h2
+        style={{
+          fontWeight: "bold",
+          fontSize: "2.5rem",
+          textDecoration: "underline",
+        }}
+      >
+        useReducer:
+      </h2>
       <MultipleUseReducer />
       <ObjectUseReducer />
       <UseReducerContext.Provider
@@ -70,6 +83,19 @@ function App() {
         <UseReducer_UseContext />
       </UseReducerContext.Provider>
       <UseReducer_FetchingData />
+
+      <p>-----------------------------------------------------------</p>
+
+      <h2
+        style={{
+          fontWeight: "bold",
+          fontSize: "2.5rem",
+          textDecoration: "underline",
+        }}
+      >
+        useCallback:
+      </h2>
+      <UseCallback />
       <hr />
       <Class_Comp name="Comp">
         <p>Class Component Child Property</p>
