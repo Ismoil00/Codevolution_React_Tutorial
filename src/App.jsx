@@ -11,6 +11,7 @@ import ParentContext from "./components/ContextParent";
 import UseReducer_UseContext from "./components/useReducer_useContext";
 import UseReducer_FetchingData from "./components/FetchingDataWith_useReducer";
 import UseCallback from "./components/useCallback/useCallback";
+import UseMemoHook from "./components/useMemoHook";
 
 export const UseReducerContext = createContext();
 
@@ -108,7 +109,7 @@ function App() {
       >
         useMemo:
       </h2>
-      {/* <UseCallback /> */}
+      <UseMemoHook />
 
       <hr />
       <Class_Comp name="Comp">
