@@ -12,6 +12,7 @@ import UseReducer_UseContext from "./components/useReducer_useContext";
 import UseReducer_FetchingData from "./components/FetchingDataWith_useReducer";
 import UseCallback from "./components/useCallback/useCallback";
 import UseMemoHook from "./components/useMemoHook";
+import UseRefHook from "./components/useRefHook";
 
 export const UseReducerContext = createContext();
 
@@ -110,6 +111,19 @@ function App() {
         useMemo:
       </h2>
       <UseMemoHook />
+
+      <p>-----------------------------------------------------------</p>
+
+      <h2
+        style={{
+          fontWeight: "bold",
+          fontSize: "2.5rem",
+          textDecoration: "underline",
+        }}
+      >
+        useRef:
+      </h2>
+      <UseRefHook />
 
       <hr />
       <Class_Comp name="Comp">
