@@ -14,6 +14,7 @@ import UseCallback from "./components/useCallback/useCallback";
 import UseMemoHook from "./components/useMemoHook";
 import UseRefHook from "./components/useRefHook";
 import CustomHook from "./components/customHooks/customHook";
+import RnderTest from "./RnderTest";
 
 export const UseReducerContext = createContext();
 
@@ -138,6 +139,12 @@ function App() {
         Custom Hook:
       </h2>
       <CustomHook />
+
+      <p>-----------------------------------------------------------</p>
+
+      <h2>Render Test</h2>
+
+      <RnderTest />
 
       <hr />
       <Class_Comp name="Comp">
