@@ -14,7 +14,8 @@ import UseCallback from "./components/useCallback/useCallback";
 import UseMemoHook from "./components/useMemoHook";
 import UseRefHook from "./components/useRefHook";
 import CustomHook from "./components/customHooks/customHook";
-import RnderTest from "./RnderTest";
+import ParentComp from "./ParentComp";
+// import ChildComp from "./ChildComp";
 
 export const UseReducerContext = createContext();
 
@@ -142,9 +143,13 @@ function App() {
 
       <p>-----------------------------------------------------------</p>
 
-      <h2>Render Test</h2>
+      <h2>Render Optimization</h2>
 
-      <RnderTest />
+      {/* this is one way of optimizing child rendering issues regarding its Parent changes */}
+      <ParentComp />
+      {/* <ParentComp>
+        <ChildComp />
+      </ParentComp> */}
 
       <hr />
       <Class_Comp name="Comp">
