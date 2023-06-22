@@ -7,7 +7,10 @@ type ThisCompProps = {
   }[];
   children: React.ReactNode;
   owner?: string;
-  handleClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  onButtonClick: (e: React.MouseEvent<HTMLDivElement>, id: number) => void;
+  val: string;
+  onChangeEvenet: React.ChangeEventHandler<HTMLInputElement>;
+  styles: React.CSSProperties;
 };
 
 type Node = React.ReactNode;
@@ -15,7 +18,10 @@ type Node = React.ReactNode;
 const ChildTSCompt = (props: ThisCompProps) => {
   return (
     <>
-      <div onClick={props.handleClick}>{props.children}</div>
+      <div style={props.styles} onClick={(e) => props.onButtonClick(e, 1)}>
+        {props.children}
+        <input type="text" value={props.val} onChange={props.onChangeEvenet} />
+      </div>
     </>
   );
 };
